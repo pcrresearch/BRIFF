@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "briff"
+version = "0.1.1"
+dependencies = [
+  "numpy",
+  "tqdm",
+  "jrmpc",
+  "torch",
+  "nvidia_ml_py3",
+  "typing-extensions ; python_version < '3.10'"
+]
+requires-python = ">=3.7"
+authors = [
+  { name="PCR Research" },
+]
+description = "Implementation of BRIFF & FLAMES algorithms, for Fast & Global Point Cloud rigid registration."
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+[project.urls]
+Repository = "https://github.com/pcrresearch/BRIFF.git"
+
+# python3 -m build
+# twine check dist/*
+# twine upload dist/*
